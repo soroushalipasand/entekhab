@@ -1,6 +1,6 @@
 rickandmorty fetch characters
 
-An application used to fetch characters data form rickandmorty , built with React, Redux-toolkit, JavaScript, and CSS.
+An application used to fetch characters data form rickandmorty , built with React, Redux-toolkit, JavaScript,axios,mui, and CSS.
 
 Installation and Setup Instructions
 Example:
