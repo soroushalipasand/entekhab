@@ -3,6 +3,9 @@ import { useEffect } from "react";
 import { fetchCharacters } from "./Redux/rickandmorty";
 import { useDispatch } from "react-redux";
 
+import CharactersCard from "./components/Card";
+import Header from "./layout/Header";
+
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -10,7 +13,8 @@ function App() {
   });
   return (
     <div className="App">
-      <header className="App-header">hello world</header>
+      <Header />
+      <CharactersCard />
     </div>
   );
 }

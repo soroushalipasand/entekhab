@@ -11,13 +11,27 @@ export const fetchCharacters = createAsyncThunk(
         method: "post",
         data: {
           query: `
-        {
-          characters {
-            results {
-              name
+          {
+            characters {
+              results {
+                name,
+               
+              }
+               results {
+                image,
+               
+              }
+              results{
+                species
+              }
+              results{
+                created
+              }
+              results{
+                gender
+              }
             }
           }
-        }
           `,
         },
       });
@@ -40,7 +54,6 @@ const rickandmorty = createSlice({
 
   extraReducers: {
     [fetchCharacters.fulfilled]: (state, action) => {
-      debugger;
       state.characters = action.payload;
       state.loading = false;
     },
